@@ -64,6 +64,7 @@ function LandingPage() {
         />
         <TutorialStep
           title="Step 6"
+          addText={<span><Orange>AI Feature (OpenAI) </Orange>🤖</span>}
           text={
             <span>
               <BoldText>Browse</BoldText> through activities and read <BoldText>more details</BoldText> about the

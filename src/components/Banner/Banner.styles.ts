@@ -28,6 +28,6 @@ export const BlackLine = styled.div`
   width: 10%;
   height: 2px;
   background-color: #000;
-  margin: 4rem 0;
+  margin: 1rem 0;
   align-self: center;
 `;
