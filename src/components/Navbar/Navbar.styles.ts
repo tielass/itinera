@@ -7,7 +7,7 @@ export const NavbarContainer = styled.nav`
   margin: 1rem 1.5rem;
 `;
 
-export const ButtonContainer = styled.nav`
+export const ButtonContainer = styled.div`
   display: flex;
   gap: 1rem;
 `;

@@ -16,6 +16,7 @@ const StyledLink = styled.a<PrimaryButtonProps>`
   cursor: pointer;
   font-weight: 500;
   font-family: 'Outfit', sans-serif;
+  font-size: 20px;
   text-decoration: none;
   display: inline-block;
 

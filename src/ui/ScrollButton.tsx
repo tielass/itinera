@@ -17,6 +17,7 @@ const StyledButton = styled.button`
   border: 1.5px solid transparent;
   border-radius: 0.2rem;
   cursor: pointer;
+  font-size: 22px;
   font-weight: 500;
   font-family: 'Outfit', sans-serif;
   position: relative;
