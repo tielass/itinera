@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import styled from '@emotion/styled';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import React, { useState, useEffect } from "react";
+import styled from "@emotion/styled";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 const Button = styled.button`
   position: fixed;
@@ -10,10 +10,11 @@ const Button = styled.button`
   color: #000;
   border: 2px solid #000;
   border-radius: 50px;
-   width: 2rem; 
-  height: 2rem; 
+  width: 2rem;
+  height: 2rem;
   cursor: pointer;
-  display: ${({ visible }: { visible: boolean }) => (visible ? 'block' : 'none')};
+  display: ${({ visible }: { visible: boolean }) =>
+    visible ? "block" : "none"};
   transition: opacity 0.3s ease;
 
   &:hover {
@@ -26,7 +27,7 @@ const ScrollToTopButton: React.FC = () => {
   const [visible, setVisible] = useState(false);
 
   const handleScroll = () => {
-    const footer = document.getElementById('footer');
+    const footer = document.getElementById("footer");
     if (footer) {
       const footerTop = footer.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
@@ -35,13 +36,13 @@ const ScrollToTopButton: React.FC = () => {
   };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 

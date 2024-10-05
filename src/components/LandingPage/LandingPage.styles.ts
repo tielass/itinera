@@ -1,9 +1,8 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
-  
 `;
 
 export const TutorialContainer = styled.div`
@@ -17,7 +16,7 @@ export const TutorialHeader = styled.h1`
 `;
 
 export const Orange = styled.span`
-  color: #FF5633;
+  color: #ff5633;
 `;
 
 export const BoldText = styled.span`

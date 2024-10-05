@@ -15,7 +15,7 @@ const StyledLink = styled.a<PrimaryButtonProps>`
   border-radius: 0.2rem;
   cursor: pointer;
   font-weight: 500;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: 20px;
   text-decoration: none;
   display: inline-block;
@@ -42,7 +42,11 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({
   disabled,
 }) => {
   return (
-    <StyledLink href={disabled ? undefined : href} target={target} disabled={disabled}>
+    <StyledLink
+      href={disabled ? undefined : href}
+      target={target}
+      disabled={disabled}
+    >
       {children}
     </StyledLink>
   );

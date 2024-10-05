@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 export const FooterContainer = styled.div`
   display: flex;
@@ -29,8 +29,8 @@ export const FooterText = styled.p`
 `;
 
 export const LogoImage = styled.img`
-  width: 150px; 
-  height: auto; 
+  width: 150px;
+  height: auto;
 `;
 
 export const SocialMediaImg = styled.img`

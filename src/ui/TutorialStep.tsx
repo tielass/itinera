@@ -16,7 +16,7 @@ const StepContainer = styled.div<{ reverse?: boolean }>`
   flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
   background-color: ${({ reverse }) => (reverse ? "#f0f0f0" : "#ffffff")};
   gap: 1rem;
-  position: relative; 
+  position: relative;
 `;
 
 const StepImage = styled.img`
@@ -35,10 +35,10 @@ const AdditionalText = styled.p`
 `;
 
 const AdditionalTextContainer = styled.div`
-  position: absolute; 
-  top: 1rem; 
-  right: 1rem; 
-  margin: 1rem; 
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  margin: 1rem;
 `;
 
 const StepTitle = styled.h3`

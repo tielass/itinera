@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from '@emotion/styled';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import React from "react";
+import styled from "@emotion/styled";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 interface ScrollButtonProps {
   targetId: string;
@@ -19,17 +19,17 @@ const StyledButton = styled.button`
   cursor: pointer;
   font-size: 22px;
   font-weight: 500;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   position: relative;
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     width: 30%;
     height: 2px;
     background-color: #000;
     position: absolute;
-    bottom: -5px; 
+    bottom: -5px;
     left: 50%;
     transform: translateX(-50%);
     transition: width 0.3s ease;
@@ -37,7 +37,12 @@ const StyledButton = styled.button`
 
   &:hover::after {
     width: 80%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.1), #000, rgba(0, 0, 0, 0.1));
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.1),
+      #000,
+      rgba(0, 0, 0, 0.1)
+    );
   }
 `;
 
@@ -55,7 +60,7 @@ const ScrollButton: React.FC<ScrollButtonProps> = ({
     event.preventDefault();
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
+      targetElement.scrollIntoView({ behavior: "smooth" });
     }
     if (onClick) {
       onClick(event);
@@ -64,7 +69,8 @@ const ScrollButton: React.FC<ScrollButtonProps> = ({
 
   return (
     <StyledButton onClick={handleClick} disabled={disabled}>
-      {children}<StyledArrowIcon icon={faArrowDown} />
+      {children}
+      <StyledArrowIcon icon={faArrowDown} />
     </StyledButton>
   );
 };

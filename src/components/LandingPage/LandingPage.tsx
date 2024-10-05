@@ -26,7 +26,12 @@ function LandingPage() {
         </TutorialHeader>
         <TutorialStep
           title="Step 1"
-          text={<span>Install the Google <BoldText>Chrome extension</BoldText> on your device</span>}
+          text={
+            <span>
+              Install the Google <BoldText>Chrome extension</BoldText> on your
+              device
+            </span>
+          }
           img={Step1}
           reverse
         />
@@ -42,7 +47,11 @@ function LandingPage() {
         />
         <TutorialStep
           title="Step 3"
-          text={<span>Click on the <BoldText>extension icon</BoldText> on the top right</span>}
+          text={
+            <span>
+              Click on the <BoldText>extension icon</BoldText> on the top right
+            </span>
+          }
           img={Step3}
           reverse
         />
@@ -58,30 +67,47 @@ function LandingPage() {
         />
         <TutorialStep
           title="Step 5"
-          text={<span>Type the <BoldText>destination</BoldText> you are planning to visit</span>}
+          text={
+            <span>
+              Type the <BoldText>destination</BoldText> you are planning to
+              visit
+            </span>
+          }
           img={Step5}
           reverse
         />
         <TutorialStep
           title="Step 6"
-          addText={<span><Orange>AI Feature (OpenAI) </Orange>🤖</span>}
+          addText={
+            <span>
+              <Orange>AI Feature (OpenAI) </Orange>🤖
+            </span>
+          }
           text={
             <span>
-              <BoldText>Browse</BoldText> through activities and read <BoldText>more details</BoldText> about the
-              attractions
+              <BoldText>Browse</BoldText> through activities and read{" "}
+              <BoldText>more details</BoldText> about the attractions
             </span>
           }
           img={Step6}
         />
         <TutorialStep
           title="Step 7"
-          text={<span><BoldText>Drag</BoldText> the chosen activities</span>}
+          text={
+            <span>
+              <BoldText>Drag</BoldText> the chosen activities
+            </span>
+          }
           img={Step7}
           reverse
         />
         <TutorialStep
           title="Step 8"
-          text={<span>Here you go - you have a <BoldText>plan for your trip!</BoldText></span>}
+          text={
+            <span>
+              Here you go - you have a <BoldText>plan for your trip!</BoldText>
+            </span>
+          }
           img={Step8}
         />
       </TutorialContainer>

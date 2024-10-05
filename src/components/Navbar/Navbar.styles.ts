@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 export const NavbarContainer = styled.nav`
   display: flex;
@@ -13,6 +13,6 @@ export const ButtonContainer = styled.div`
 `;
 
 export const LogoImage = styled.img`
-  width: 150px; 
-  height: auto; 
+  width: 150px;
+  height: auto;
 `;
