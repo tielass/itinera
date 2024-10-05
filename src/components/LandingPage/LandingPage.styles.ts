@@ -19,3 +19,7 @@ export const TutorialHeader = styled.h1`
 export const Orange = styled.span`
   color: #FF5633;
 `;
+
+export const BoldText = styled.span`
+  font-weight: bold;
+`;

@@ -1,6 +1,12 @@
 import TutorialStep from "../../ui/TutorialStep";
 import Banner from "../Banner/Banner";
-import { MainContainer, Orange, TutorialContainer, TutorialHeader } from "./LandingPage.styles";
+import {
+  BoldText,
+  MainContainer,
+  Orange,
+  TutorialContainer,
+  TutorialHeader,
+} from "./LandingPage.styles";
 import Step1 from "../../assets/images/step-1.png";
 import Step2 from "../../assets/images/step-2.png";
 import Step3 from "../../assets/images/step-3.png";
@@ -20,49 +26,61 @@ function LandingPage() {
         </TutorialHeader>
         <TutorialStep
           title="Step 1"
-          text="Install the Google Chrome extension on your device"
+          text={<span>Install the Google <BoldText>Chrome extension</BoldText> on your device</span>}
           img={Step1}
           reverse
         />
         <TutorialStep
           title="Step 2"
-          text="Open Google Calendar in the Google Chrome browser"
+          text={
+            <span>
+              Open Google Calendar in the <BoldText>Google Chrome</BoldText>{" "}
+              browser
+            </span>
+          }
           img={Step2}
-          
         />
         <TutorialStep
           title="Step 3"
-          text="Click on the extension icon on the top right"
+          text={<span>Click on the <BoldText>extension icon</BoldText> on the top right</span>}
           img={Step3}
           reverse
         />
         <TutorialStep
           title="Step 4"
-          text="Navigate to the button on the right of the page and click on the orange button"
+          text={
+            <span>
+              Navigate to the button on the right of the page and click on the
+              <BoldText> orange button</BoldText>
+            </span>
+          }
           img={Step4}
-          
         />
         <TutorialStep
           title="Step 5"
-          text="Type the destination you are planning to visit"
+          text={<span>Type the <BoldText>destination</BoldText> you are planning to visit</span>}
           img={Step5}
           reverse
         />
         <TutorialStep
           title="Step 6"
-          text="Browse through activities and read more details about the attractions "
+          text={
+            <span>
+              <BoldText>Browse</BoldText> through activities and read <BoldText>more details</BoldText> about the
+              attractions
+            </span>
+          }
           img={Step6}
-          
         />
         <TutorialStep
           title="Step 7"
-          text="Drag the chosen activities"
+          text={<span><BoldText>Drag</BoldText> the chosen activities</span>}
           img={Step7}
           reverse
         />
         <TutorialStep
           title="Step 8"
-          text="Here you go - you have a plan for your trip!"
+          text={<span>Here you go - you have a <BoldText>plan for your trip!</BoldText></span>}
           img={Step8}
         />
       </TutorialContainer>

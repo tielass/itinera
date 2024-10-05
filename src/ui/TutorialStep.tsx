@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styled from '@emotion/styled';
 
 interface TutorialStepProps {
   title: string;
-  text: string;
+  text: string | ReactNode;
   img: string;
   reverse?: boolean;
 }
