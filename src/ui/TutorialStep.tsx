@@ -10,7 +10,7 @@ interface TutorialStepProps {
 
 const StepContainer = styled.div<{ reverse?: boolean }>`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   padding: 2rem 7rem;
   flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
   background-color: ${({ reverse }) => (reverse ? '#f0f0f0' : '#ffffff')}; 
