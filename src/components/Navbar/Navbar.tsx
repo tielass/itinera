@@ -8,7 +8,7 @@ function Navbar() {
     <NavbarContainer>
       <LogoImage src={Logo} alt="" title="Itinera" />
       <ButtonContainer>
-        <ScrollButton>How to use it</ScrollButton>
+        <ScrollButton targetId="tutorial-container">How to use it</ScrollButton>
         <PrimaryButton
           href="https://chromewebstore.google.com/detail/itinera-%E2%80%93-plan-your-trip/ijkbbldofdehelecdeeomckgccbfebfo?utm_source=ext_app_menu"
           target="_blank"

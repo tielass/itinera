@@ -1,32 +1,39 @@
 import Logo from "../../assets/images/itinera-logo.svg";
-import Instagram from "../../assets/images/ig.svg";
-import Facebook from "../../assets/images/fb.svg";
-import Twitter from "../../assets/images/x.svg";
-import { BottomLink, FooterContainer, FooterText, LogoImage, SocialMediaContainer, TextContainer } from "./Footer.styles";
+import PrimaryButton from "../../ui/PrimaryButton";
+import {
+  BottomLink,
+  FooterContainer,
+  FooterText,
+  LogoImage,
+  TextContainer,
+} from "./Footer.styles";
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <FooterContainer>
+    <FooterContainer id="footer">
       <LogoImage src={Logo} alt="" />
       <TextContainer>
-      <FooterText>
-        Lorem iFooterTextsum dolor sit amet, consectetur adipiscing elit. Fusce commodo
-        dui nec quam imperdiet finibus. Aliquam libero ante, laoreet vitae purus
-        sagittis, dictum maximus turpis. Nulla ut consectetur tortor. Aliquam
-        ultrices ultrices mattis. Nulla dapibus ex eu tempor fringilla. Donec
-        porta a eros nec porta. Donec quis porttitor nisi. Donec.
-      </FooterText>
-
+        <FooterText>
+          Itinera is a free chrome extension, <br />
+          plan your trip seamlessly in seconds!
+        </FooterText>
+        <div>
+          <PrimaryButton
+            href="https://chromewebstore.google.com/detail/itinera-%E2%80%93-plan-your-trip/ijkbbldofdehelecdeeomckgccbfebfo?utm_source=ext_app_menu"
+            target="_blank"
+          >
+            {" "}
+            Add to Chrome - Its Free{" "}
+          </PrimaryButton>
+        </div>
       </TextContainer>
-      <SocialMediaContainer>
-        <img src={Twitter} alt="" />
-        <img src={Facebook} alt="" />
-        <img src={Instagram} alt="" />
-      </SocialMediaContainer>
       <div>
         <BottomLink href="">Impressum</BottomLink>
         <BottomLink href="">Datenschutz</BottomLink>
       </div>
+      <FooterText>&copy; {currentYear} Itinera</FooterText>
     </FooterContainer>
   );
 }

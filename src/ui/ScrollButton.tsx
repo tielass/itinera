@@ -1,15 +1,16 @@
-import styled from "@emotion/styled";
+import React from 'react';
+import styled from '@emotion/styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
-
 interface ScrollButtonProps {
+  targetId: string;
   children: React.ReactNode;
-  onClick?: () => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   disabled?: boolean;
 }
 
-const StyledButton = styled.button<ScrollButtonProps>`
+const StyledButton = styled.button`
   background-color: transparent;
   color: #000;
   padding: 0.3rem 0.6rem;
@@ -20,15 +21,6 @@ const StyledButton = styled.button<ScrollButtonProps>`
   font-family: 'Outfit', sans-serif;
   position: relative;
 
- &:hover {
-    // border: 1.5px solid #000;
-    background-color: #D2D2D2;
-  }
-
-  &:focus {
-   background-color: #D2D2D2;
-  }
-
   &::after {
     content: '';
     display: block;
@@ -36,9 +28,15 @@ const StyledButton = styled.button<ScrollButtonProps>`
     height: 2px;
     background-color: #000;
     position: absolute;
-    bottom: -5px; /* Adjust as needed */
+    bottom: -5px; 
     left: 50%;
     transform: translateX(-50%);
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 80%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.1), #000, rgba(0, 0, 0, 0.1));
   }
 `;
 
@@ -48,11 +46,23 @@ const StyledArrowIcon = styled(FontAwesomeIcon)`
 
 const ScrollButton: React.FC<ScrollButtonProps> = ({
   children,
+  targetId,
   onClick,
   disabled,
 }) => {
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+    if (onClick) {
+      onClick(event);
+    }
+  };
+
   return (
-    <StyledButton onClick={onClick} disabled={disabled}>
+    <StyledButton onClick={handleClick} disabled={disabled}>
       {children}<StyledArrowIcon icon={faArrowDown} />
     </StyledButton>
   );

@@ -11,6 +11,10 @@ export const FooterContainer = styled.div`
 
 export const TextContainer = styled.div`
   width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
 `;
 
 export const SocialMediaContainer = styled.div`
